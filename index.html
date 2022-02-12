@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FORCA</title>
   <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -16,15 +16,18 @@
       <section class="titulo-pagina">
         <h1>Jogo da Forca</h1>
       </section>
-      <section class="logos">
 
-      </section>
     </header>
 
     <section class="main-content">
-      <button type="button" name="iniciar-jogo" id="bntIniciar" class="bnt">INICIAR FORCA</button>
+      <section name="area-inicial" class="area-inicial" id="startA">
+        <button type="button" name="iniciar-jogo" id="bntIniciar" class="bnt">INICIAR FORCA</button>
+        <input type="form" name="nova-palavra" id="nWord" placeholder="Digite uma palavra sem acentos ou espaços.."/>
+        <button name="adicionar-palavra" id="addWord">ADICIONAR PALAVRA(opcional)</button>
+      </section>
       <section id="area-jogo">
         <button id="bntReiniciar" type="button" class="apagar">Reiniciar!</button>
+
       </section>
     </section>
 
@@ -41,6 +44,7 @@
   <script src="js/canvas.js"></script>
   <script src="js/desenha-forca.js"></script>
   <script src="js/sorteia.js"></script>
+  <script src="js/adicionar-palavra.js"></script>
 </body>
 
 </html>

@@ -1,13 +1,12 @@
 //criar função e desenvolver lógica para sorteiar uma palavra secreta para a forca//
 
 //palavras disponíveis inicialmente//
-var pool = ["azul", "bola", "cama", "maçã", "rosa", "alura", "carro", "corda", "lápis", "livro", "porta", "agente", "cavalo", "fronha", "humano", "jardim", "anedota", "cardume", "família", "quimera", "sucesso"];
+var pool = ["arco", "bola", "cama", "maçã", "rosa", "alura", "carro", "corda", "lápis", "livro", "porta", "agente", "cavalo", "fronha", "humano", "jardim", "anedota", "cardume", "família", "quimera", "sucesso"];
 //sorteiar uma palavra aleatória dentro da pool//
 var palavraSecreta = pool[Math.floor(Math.random() * pool.length)];
-console.log(palavraSecreta);
-console.log(palavraSecreta.length);
+
 var palavraCerta = palavraSecreta.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Zs]/g, "").split('');
-console.log(palavraCerta);
+
 var progressoForca = 0;
 var progressoPalavra = 0;
 var letrasAcertadas = " ";
@@ -21,7 +20,6 @@ function chavePressionada(evento) {
 //ao apertar uma tecla verifica se a string contém numeros, desenha a letra certa ou sinaliza a letra errada //
 document.onkeypress = function(evento) {
   var str = chavePressionada(evento).toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Zs]/g, "");
-  console.log(str);
 //verifica se o jogo acabou
   if(progressoPalavra <= palavraCerta.length && progressoForca < 6){
 //verifica se a key pressionada é uma letra

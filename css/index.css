@@ -9,38 +9,42 @@ body {
 }
 
 main {
-  width: 1300px;
+  width: 1200px;
   position: relative;
   margin: 0 auto;
 }
 
 footer {
-  height: 90px;
+  height: auto;
 }
 
 h1{
   background-image: url('../img/foggy_woods.jpg');
   font-size: 45px;
   color: white;
+  margin: 0px;
+  height: 90px;
+  padding-top: 28px;
+}
+
+li{
+  padding: 8px;
 }
 
 .titulo {
-  height: 90px;
+  height: auto;
+
 }
 
 .titulo-pagina {
   text-align: center;
   align-items: center;
   padding: 0px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .main-content {
   text-align: center;
-}
-
-li{
-  padding: 8px;
 
 }
 
@@ -54,11 +58,6 @@ li{
   display: none;
 }
 
-#forca {
-  margin: 20px 50px;
-  background-color: darkblue;
-}
-
 .bnt {
   border-radius: 30px;
   color: lightgreen;
@@ -67,11 +66,19 @@ li{
   width: 80px;
   font-size: 15px;
   font-weight: 800;
+  margin: 20px;
+  position: relative;
+  left: 45%;
 }
 
 .github {
   position: relative;
   bottom: 5px;
+}
+
+.area-inicial {
+  display: grid;
+  margin-bottom: 15px;
 }
 
 #bntReiniciar {
@@ -85,4 +92,19 @@ li{
   position: fixed;
   top: 58%;
   left: 60%;
+}
+
+#nWord {
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  font-weight: 650;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#addWord {
+  background-color: darkblue;
+  color: lightgreen;
+  font-weight: 800;
 }

@@ -46,8 +46,15 @@ function desenhaCanvas() {
   canvas.setAttributeNode(largura);
   canvas.setAttributeNode(id);
 
-  //esconder o botão Iniciar//
+  //esconder o botão Iniciar, adicionar palavra e input//
+  var novaPalavra = document.querySelector('#nWord');
   var visibilidadeBotao = document.createAttribute("class");
   visibilidadeBotao.value = "apagar";
   bntIniciar.setAttributeNode(visibilidadeBotao);
+  var visibilidadeBotao = document.createAttribute("class");
+  visibilidadeBotao.value = "apagar";
+  bntAdicionarPalavra.setAttributeNode(visibilidadeBotao);
+  var visibilidadeBotao = document.createAttribute("class");
+  visibilidadeBotao.value = "apagar";
+  novaPalavra.setAttributeNode(visibilidadeBotao);
 }

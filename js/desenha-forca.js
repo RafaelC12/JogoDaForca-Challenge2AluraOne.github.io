@@ -4,8 +4,6 @@ function desenhaForca(){
 
   var tela = document.querySelector("#forca");
   var pincel = tela.getContext('2d');
-  //canvas base para area principal do jogo(apagar depois de programar)//
-
   //base da forca//
   pincel.fillStyle = 'white';
   pincel.strokeStyle = 'white';
@@ -25,7 +23,7 @@ function desenhaForca(){
   //desenhar traços da palavra//
   desenhaTracos(420, 470);
 }
-
+//funções para desenhar corpo
 function desenhaCabeca() {
   var tela = document.querySelector("#forca");
   var pincel = tela.getContext('2d');
@@ -90,7 +88,7 @@ function desenhaPernaD() {
   pincel.lineTo(650, 590);
   pincel.stroke();
 }
-
+//funções para  desenha traços e letras escolhidas
 function desenhaTracos(x, x2) {
   var tela = document.querySelector("#forca");
   var pincel = tela.getContext('2d');
@@ -140,7 +138,7 @@ function desenhaQuadroDeErros() {
   pincel.strokeRect(950, 60, 118, 55);
   pincel.strokeRect(950, 115, 118, 520);
 }
-
+//funções para final do jogo
 function desenhaMensagemDerrota() {
   var tela = document.querySelector("#forca");
   var pincel = tela.getContext('2d');
@@ -148,7 +146,7 @@ function desenhaMensagemDerrota() {
   pincel.font = "bold 40px sans-serif";
   pincel.fillStyle = 'black';
   pincel.beginPath();
-  pincel.arc(600, 250, 60, 0, 2*3.14);
+  pincel.arc(600, 250, 50, 0, 2*3.14);
   pincel.fill();
   pincel.fillStyle = 'red';
   pincel.fillText('Fim de Jogo', 700, 200);
