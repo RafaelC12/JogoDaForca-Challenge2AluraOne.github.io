@@ -40,13 +40,14 @@ h1{
 }
 
 li{
-  padding: 5px;
+  padding: 8px;
 
 }
 
 .dados-dev ul li{
   display: inline-block;
   float: left;
+  font-size: 20px;
 }
 
 .apagar {
@@ -66,6 +67,11 @@ li{
   width: 80px;
   font-size: 15px;
   font-weight: 800;
+}
+
+.github {
+  position: relative;
+  bottom: 5px;
 }
 
 #bntReiniciar {
