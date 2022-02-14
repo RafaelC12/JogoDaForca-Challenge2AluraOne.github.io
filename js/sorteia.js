@@ -20,25 +20,24 @@ function chavePressionada(evento) {
 //ao apertar uma tecla verifica se a string contém numeros, desenha a letra certa ou sinaliza a letra errada //
 document.onkeypress = function(evento) {
   var str = chavePressionada(evento).toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Zs]/g, "");
-//verifica se o jogo acabou
-  if(progressoPalavra <= palavraCerta.length && progressoForca < 6){
-//verifica se a key pressionada é uma letra
-    if(isNaN(str)) {
-//verifica se a letra está na palavra sorteada
-      if(palavraCerta.includes(str)) {
-//verifica se a letra já não foi usada antes
-        if(!letrasAcertadas.includes(str)) {
-//desenha a letra correta no seu determinado lugar
+  //verifica se o jogo acabou
+  if (progressoPalavra <= palavraCerta.length && progressoForca < 6) {
+    //verifica se a key pressionada é uma letra
+    if (isNaN(str)) {
+      //verifica se a letra está na palavra sorteada
+      if (palavraCerta.includes(str)) {
+        //verifica se a letra já não foi usada antes
+        if (!letrasAcertadas.includes(str)) {
+          //desenha a letra correta no seu determinado lugar
           for (var o = 0; o < palavraCerta.length; o++) {
 
-            if(palavraCerta[o] == str) {
+            if (palavraCerta[o] == str) {
 
               desenhaLetraCorreta(palavraCerta[o], o);
               progressoPalavra++;
               letrasAcertadas += str;
-              console.log(letrasAcertadas);
 
-              if(progressoPalavra == palavraCerta.length) {
+              if (progressoPalavra == palavraCerta.length) {
 
                 desenhaMensagemVitoria();
                 progressoForca = 6;
@@ -47,49 +46,49 @@ document.onkeypress = function(evento) {
             }
           }
         }
-      } else if(progressoForca < 6){
-//desenha a letra incorreta nos erros e desenha a forca
-          if(!letrasErradas.includes(str)){
+      } else if (progressoForca < 6) {
+        //desenha a letra incorreta nos erros e desenha a forca
+        if (!letrasErradas.includes(str)) {
 
-              desenhaLetraIncorreta(str, letrasErradas.length - 1);
-              letrasErradas += str;
-              console.log(letrasErradas);
+          desenhaLetraIncorreta(str, letrasErradas.length - 1);
+          letrasErradas += str;
+          console.log(letrasErradas);
 
-              if(progressoForca == 0) {
+          if (progressoForca == 0) {
 
-                desenhaQuadroDeErros();
-                desenhaErros();
-                desenhaCabeca();
-                progressoForca++;
-              } else if (progressoForca == 1) {
+            desenhaQuadroDeErros();
+            desenhaErros();
+            desenhaCabeca();
+            progressoForca++;
+          } else if (progressoForca == 1) {
 
-                  desenhaTronco();
-                  progressoForca++;
-              } else if (progressoForca == 2) {
+            desenhaTronco();
+            progressoForca++;
+          } else if (progressoForca == 2) {
 
-                  desenhaBracoE();
-                  progressoForca++;
-              } else if (progressoForca == 3) {
+            desenhaBracoE();
+            progressoForca++;
+          } else if (progressoForca == 3) {
 
-                  desenhaBracoD();
-                  progressoForca++;
-              } else if (progressoForca == 4) {
+            desenhaBracoD();
+            progressoForca++;
+          } else if (progressoForca == 4) {
 
-                  desenhaPernaE();
-                  progressoForca++;
-  //desenha a última parte e mostra a mensagem de derrota na tela
-              } else if (progressoForca == 5) {
+            desenhaPernaE();
+            progressoForca++;
+            //desenha a última parte e mostra a mensagem de derrota na tela
+          } else if (progressoForca == 5) {
 
-                  desenhaPernaD();
-                  desenhaMensagemDerrota();
-                  progressoForca++;
-                  bntReiniciar.removeAttribute('class');
-              }
+            desenhaPernaD();
+            desenhaMensagemDerrota();
+            progressoForca++;
+            bntReiniciar.removeAttribute('class');
           }
         }
+      }
     } else {
 
-        alert("Entrada Inválida");
-      }
+      alert("Entrada Inválida");
+    }
   }
 };

@@ -1,6 +1,6 @@
 bntIniciar.addEventListener('click', desenhaForca);
 
-function desenhaForca(){
+function desenhaForca() {
 
   var tela = document.querySelector("#forca");
   var pincel = tela.getContext('2d');
@@ -30,7 +30,7 @@ function desenhaCabeca() {
 
   pincel.fillStyle = 'white';
   pincel.beginPath();
-  pincel.arc(600, 250, 50, 0, 2*3.14);
+  pincel.arc(600, 250, 50, 0, 2 * 3.14);
   pincel.stroke();
 }
 
@@ -118,7 +118,7 @@ function desenhaLetraIncorreta(letra, posicao) {
 
   pincel.font = "bold 25px sans-serif";
   pincel.fillStyle = 'red';
-  pincel.fillText(letra, 1000, 180 + (posicao*80));
+  pincel.fillText(letra, 1000, 180 + (posicao * 80));
 
 }
 
@@ -146,12 +146,12 @@ function desenhaMensagemDerrota() {
   pincel.font = "bold 40px sans-serif";
   pincel.fillStyle = 'black';
   pincel.beginPath();
-  pincel.arc(600, 250, 50, 0, 2*3.14);
+  pincel.arc(600, 250, 50, 0, 2 * 3.14);
   pincel.fill();
   pincel.fillStyle = 'red';
   pincel.fillText('Fim de Jogo', 700, 200);
   pincel.fillText('Você Perdeu!', 690, 250);
-//desenha olhos em X
+  //desenha olhos em X
   pincel.beginPath();
   pincel.moveTo(565, 220);
   pincel.lineTo(590, 240);

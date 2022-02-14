@@ -2,7 +2,7 @@ var bntIniciar = document.querySelector("#bntIniciar");
 var bntReiniciar = document.querySelector("#bntReiniciar");
 
 //criar o canvas//
-bntIniciar.addEventListener('click', function(){
+bntIniciar.addEventListener('click', function() {
 
   desenhaCanvas();
 });

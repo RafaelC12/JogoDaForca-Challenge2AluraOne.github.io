@@ -18,7 +18,7 @@ footer {
   height: auto;
 }
 
-h1{
+h1 {
   background-image: url('../img/foggy_woods.jpg');
   font-size: 45px;
   color: white;
@@ -27,13 +27,12 @@ h1{
   padding-top: 28px;
 }
 
-li{
+li {
   padding: 8px;
 }
 
 .titulo {
   height: auto;
-
 }
 
 .titulo-pagina {
@@ -45,10 +44,9 @@ li{
 
 .main-content {
   text-align: center;
-
 }
 
-.dados-dev ul li{
+.dados-dev ul li {
   display: inline-block;
   float: left;
   font-size: 20px;
