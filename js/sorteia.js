@@ -49,41 +49,43 @@ document.onkeypress = function(evento) {
         }
       } else if(progressoForca < 6){
 //desenha a letra incorreta nos erros e desenha a forca
-            if(!letrasErradas.includes(str)){
+          if(!letrasErradas.includes(str)){
 
               desenhaLetraIncorreta(str, letrasErradas.length - 1);
               letrasErradas += str;
-            }
-            if(progressoForca == 0) {
+              console.log(letrasErradas);
 
-              desenhaQuadroDeErros();
-              desenhaErros();
-              desenhaCabeca();
-              progressoForca++;
-            } else if (progressoForca == 1) {
+              if(progressoForca == 0) {
 
-                desenhaTronco();
+                desenhaQuadroDeErros();
+                desenhaErros();
+                desenhaCabeca();
                 progressoForca++;
-            } else if (progressoForca == 2) {
+              } else if (progressoForca == 1) {
 
-                desenhaBracoE();
-                progressoForca++;
-            } else if (progressoForca == 3) {
+                  desenhaTronco();
+                  progressoForca++;
+              } else if (progressoForca == 2) {
 
-                desenhaBracoD();
-                progressoForca++;
-            } else if (progressoForca == 4) {
+                  desenhaBracoE();
+                  progressoForca++;
+              } else if (progressoForca == 3) {
 
-                desenhaPernaE();
-                progressoForca++;
-//desenha a última parte e mostra a mensagem de derrota na tela
-            } else if (progressoForca == 5) {
+                  desenhaBracoD();
+                  progressoForca++;
+              } else if (progressoForca == 4) {
 
-                desenhaPernaD();
-                desenhaMensagemDerrota();
-                progressoForca++;
-                bntReiniciar.removeAttribute('class');
-            }
+                  desenhaPernaE();
+                  progressoForca++;
+  //desenha a última parte e mostra a mensagem de derrota na tela
+              } else if (progressoForca == 5) {
+
+                  desenhaPernaD();
+                  desenhaMensagemDerrota();
+                  progressoForca++;
+                  bntReiniciar.removeAttribute('class');
+              }
+          }
         }
     } else {
 
