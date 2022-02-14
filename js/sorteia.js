@@ -52,7 +52,6 @@ document.onkeypress = function(evento) {
 
           desenhaLetraIncorreta(str, letrasErradas.length - 1);
           letrasErradas += str;
-          console.log(letrasErradas);
 
           if (progressoForca == 0) {
 
