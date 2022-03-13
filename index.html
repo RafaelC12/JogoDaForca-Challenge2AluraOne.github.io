@@ -4,43 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FORCA</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <main>
-
-    <header class="titulo">
-      <section class="titulo-pagina">
-        <h1>Jogo da Forca</h1>
-      </section>
-
-    </header>
-
-    <section class="main-content">
-      <section name="area-inicial" class="area-inicial" id="startA">
-        <button type="button" name="iniciar-jogo" id="bntIniciar" class="bnt">INICIAR FORCA</button>
-        <input type="form" name="nova-palavra" id="nWord" placeholder="Digite uma palavra sem acentos ou espaços.." />
-        <button name="adicionar-palavra" id="addWord">ADICIONAR PALAVRA(opcional)</button>
-      </section>
-      <section id="area-jogo">
-        <button id="bntReiniciar" type="button" class="apagar">Reiniciar!</button>
-
-      </section>
+  <header class="titulo">
+    <img class="titulo__img" src="./img/forca.png">
+    <h1 class="titulo__titulo">Jogo da Forca</h1>
+  </header>
+  <main class="main__content">
+    <section name="area-inicial" class="area-inicial" id="startA">
+      <button type="button" name="iniciar-jogo" id="bntIniciar" class="bnt">iniciar forca</button>
+      <div class="form-nWord">
+        <input type="form" class="nova-palavra" id="nWord" placeholder="Digite uma palavra sem acentos ou espaços.." />
+        <button class="adicionar-palavra" id="addWord">adicionar palavra(opcional)</button>
+      </div>
     </section>
-
-    <footer class="dados-dev" name="dados-dev">
-      <label for="tabela-dados" style="font-size: 20px">Desenvolvedor:</label>
-      <ul class="tabela-dados" name="tabela-dados">
-        <li class="name" name="name">Rafael Chagas Correia /</li>
-        <li class="email" name="email">e-mail: rafaelcchagas@outlook.com /</li>
-        <li class="github" name="github"><a href="https://github.com/RafaelC12" target="_blank"><img src="img/gitLogo.png" /></a></li>
-      </ul>
-    </footer>
-
+    <section id="area-jogo" class="area-jogo">
+      <button id="bntReiniciar" type="button" class="apagar">Reiniciar!</button>
+    </section>
   </main>
+  <footer class="dados-dev" name="dados-dev">
+    <label for="tabela-dados" style="font-size: 20px">Desenvolvedor:</label>
+    <ul class="tabela-dados" name="tabela-dados">
+      <li class="name" name="name">Rafael Chagas Correia /</li>
+      <li class="email" name="email">e-mail: rafaelcchagas@outlook.com /</li>
+      <li class="github" name="github"><a href="https://github.com/RafaelC12" target="_blank"><img src="img/gitLogo.png" /></a></li>
+    </ul>
+  </footer>
   <script src="js/canvas.js"></script>
   <script src="js/desenha-forca.js"></script>
   <script src="js/sorteia.js"></script>

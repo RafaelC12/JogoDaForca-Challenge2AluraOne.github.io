@@ -1,10 +1,12 @@
 var bntIniciar = document.querySelector("#bntIniciar");
 var bntReiniciar = document.querySelector("#bntReiniciar");
+var areaInicial = document.getElementById("startA");
 
 //criar o canvas//
 bntIniciar.addEventListener('click', function() {
 
   desenhaCanvas();
+  desenhaForca();
 });
 
 bntReiniciar.addEventListener('click', function() {
@@ -33,28 +35,16 @@ function desenhaCanvas() {
   var tabuleiro = document.createElement("canvas");
   document.getElementById('area-jogo').appendChild(tabuleiro);
   //adicionando atributos da tag//
-  var altura = document.createAttribute("height");
-  var largura = document.createAttribute("width");
   var id = document.createAttribute("id");
 
-  altura.value = "800";
-  largura.value = "1200";
   id.value = "forca";
 
   var canvas = document.getElementsByTagName('canvas')[0];
-  canvas.setAttributeNode(altura);
-  canvas.setAttributeNode(largura);
   canvas.setAttributeNode(id);
 
-  //esconder o botão Iniciar, adicionar palavra e input//
+  //esconder a area inicial//
   var novaPalavra = document.querySelector('#nWord');
   var visibilidadeBotao = document.createAttribute("class");
   visibilidadeBotao.value = "apagar";
-  bntIniciar.setAttributeNode(visibilidadeBotao);
-  var visibilidadeBotao = document.createAttribute("class");
-  visibilidadeBotao.value = "apagar";
-  bntAdicionarPalavra.setAttributeNode(visibilidadeBotao);
-  var visibilidadeBotao = document.createAttribute("class");
-  visibilidadeBotao.value = "apagar";
-  novaPalavra.setAttributeNode(visibilidadeBotao);
+  areaInicial.setAttributeNode(visibilidadeBotao);
 }
